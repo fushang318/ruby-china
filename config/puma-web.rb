@@ -2,7 +2,7 @@ app_root = '/web/ruby-china/current'
 pidfile "#{app_root}/tmp/pids/puma.pid"
 state_path "#{app_root}/tmp/pids/puma.state"
 stdout_redirect "#{app_root}/log/puma.stdout.log", "#{app_root}/log/puma.stderr.log", true
-bind 'unix:/tmp/unicorn.ruby-china.sock'
+bind "unix:#{app_root}/tmp/sock/unicorn.ruby-china.sock"
 daemonize true
 port 7000
 workers 4
