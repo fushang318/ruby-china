@@ -1,1 +1,1 @@
-server 'ruby-china.org', user: 'ruby', roles: %w{app db web}
+server '42.120.41.92', user: 'root', roles: %w{app db web}

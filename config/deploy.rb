@@ -1,8 +1,8 @@
 lock '~> 3.6.1'
 
 set :application, 'ruby-china'
-set :repo_url, 'git://github.com/ruby-china/ruby-china.git'
-set :deploy_to, "/data/www/#{ fetch(:application) }"
+set :repo_url, 'git://github.com/fushang318/ruby-china.git'
+set :deploy_to, "/web/#{ fetch(:application) }"
 
 set :puma_role, :app
 set :puma_conf, "#{release_path}/config/puma-web.rb"
