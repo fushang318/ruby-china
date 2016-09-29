@@ -2,6 +2,10 @@
 class AccountController < Devise::RegistrationsController
   protect_from_forgery
 
+  def new
+    redirect_to "/"
+  end
+
   def edit
     @user = current_user
   end
@@ -12,6 +16,7 @@ class AccountController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    return redirect_to "/"
     build_resource(sign_up_params)
     resource.login = params[resource_name][:login]
     resource.email = params[resource_name][:email]
