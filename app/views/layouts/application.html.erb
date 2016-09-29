@@ -42,16 +42,13 @@
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
       <div class="container">
         <div class="navbar-header" id="navbar-header" data-turbolinks-permanent>
-          <a href="/" class="navbar-brand"><b>Ruby</b> China</a>
+          <a href="/" class="navbar-brand"><b>笨笨鸟公会论坛</b></a>
         </div>
 
         <div id="main-nav-menu">
           <%= render_list class: "nav navbar-nav" do |li|
              li << link_to(t("menu.topics"), main_app.topics_path)
              li << link_to(t("menu.wiki"), main_app.pages_path) if !mobile?
-             li << link_to(t("menu.jobs"), main_app.jobs_path)
-             li << link_to(t("menu.sites"), main_app.sites_path) if !mobile?
-             li << link_to(t("menu.gems"), 'https://gems.ruby-china.org', target: '_blank') if !mobile?
           end %>
         </div>
 
